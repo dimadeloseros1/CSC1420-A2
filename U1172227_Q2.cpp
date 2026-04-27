@@ -30,11 +30,6 @@ public:
         for (int i = 0; i < x; i++) {
             it = nums.erase(it);
         }
-
-        for (int num : nums) {
-            cout << num << endl;
-        }
-
     }
 
     static int firstInput() {
@@ -69,11 +64,11 @@ public:
         }
     }
 
-    // static void printList(const list<int> &nums) {
-    //     for (int num : nums) {
-    //         cout << num << endl;
-    //     }
-    // }
+    static void printList(list<int> nums) {
+        for (int num : nums) {
+            cout << num << endl;
+        }
+    }
 };
 
 int main() {
