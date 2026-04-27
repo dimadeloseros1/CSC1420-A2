@@ -27,9 +27,14 @@ public:
             it++;
         }
 
+        cout << "Before the deletion: " << endl;
+        printList(nums);
+
         for (int i = 0; i < x; i++) {
             it = nums.erase(it);
         }
+        cout << endl << "after the deletion: " << endl;
+        printList(nums);
     }
 
     static int firstInput() {
