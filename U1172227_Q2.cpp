@@ -21,6 +21,14 @@ public:
         nums.push_back(9);
         nums.push_back(10);
 
+        // This piece of code makes sure that X + Y do not exceed
+        while (x + y > nums.size()) {
+            cout << "Invalid values. Please make sure that " << y << " + " << x << " does not exceed " << nums.size() << endl;
+
+            x = firstInput();
+            y = secondInput();
+        }
+
         auto it = nums.begin();
 
         for (int i = 0; i < y; i++) {
@@ -41,7 +49,7 @@ public:
         int x;
 
         while (true) {
-            cout << "Please enter the first number between 1 and 9 'inclusive': ";
+            cout << "Please enter x, the number of nodes to delete: ";
             cin >> x;
 
             if (x > 0) {
@@ -57,7 +65,7 @@ public:
         int y;
 
         while (true) {
-            cout << "Please enter the second number: ";
+            cout << "Please enter y, the number of nodes to skip: ";
             cin >> y;
 
             if (y > 0) {
@@ -69,10 +77,11 @@ public:
         }
     }
 
-    static void printList(list<int> nums) {
+    static void printList(const list<int> nums) {
         for (int num : nums) {
             cout << num << endl;
         }
+        cout << "null" << endl;
     }
 };
 
