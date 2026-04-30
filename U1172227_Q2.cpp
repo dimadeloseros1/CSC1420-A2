@@ -77,7 +77,7 @@ public:
         }
     }
 
-    static void printList(const list<int> nums) {
+    static void printList(const list<int> &nums) {
         for (int num : nums) {
             cout << num << endl;
         }
