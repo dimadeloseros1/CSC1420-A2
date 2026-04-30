@@ -21,6 +21,9 @@ public:
         nums.push_back(9);
         nums.push_back(10);
 
+        // Note: The above operation could be simplified with a loop. However, for the sake of following,
+        // the "slides" I decided to take the long route towards this code
+
         // This piece of code makes sure that X + Y do not exceed
         while (x + y > nums.size()) {
             cout << "Invalid values. Please make sure that " << y << " + " << x << " does not exceed " << nums.size() << endl;
@@ -45,6 +48,7 @@ public:
         printList(nums);
     }
 
+    // This function takes care of asking the user to input X nodes to delete
     static int firstInput() {
         int x;
 
@@ -61,6 +65,7 @@ public:
         }
     }
 
+    // This function takes care of asking the user to input a number Y to skip nodes
     static int secondInput() {
         int y;
 
@@ -77,6 +82,7 @@ public:
         }
     }
 
+    // Simple function that takes care of printing the end results of the code above
     static void printList(const list<int> &nums) {
         for (int num : nums) {
             cout << num << endl;
