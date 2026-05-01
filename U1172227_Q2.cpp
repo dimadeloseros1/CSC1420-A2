@@ -87,7 +87,7 @@ public:
     // Simple function that takes care of printing the end results of the code above
     static void printList(const list<int> &nums) {
         for (int num : nums) {
-            cout << num << endl;
+            cout << num << " -> ";
         }
         cout << "null" << endl;
     }
