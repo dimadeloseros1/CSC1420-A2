@@ -34,6 +34,7 @@ public:
 
         auto it = nums.begin();
 
+        // This loop is in-charge of skipping the desired nodes
         for (int i = 0; i < y; i++) {
             it++;
         }
@@ -41,6 +42,7 @@ public:
         cout << "Before the deletion: " << endl;
         printList(nums);
 
+        // This loop is in charge of deleting the desired nodes
         for (int i = 0; i < x; i++) {
             it = nums.erase(it);
         }
